@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 li {
@@ -55,6 +56,8 @@ button {
 }
 body {
   padding-top: 2.4rem;
+  position: relative;
+  overflow-x: hidden;
 }
 .nav {
   max-width: 111rem;
@@ -62,6 +65,9 @@ body {
   margin-bottom: 17.2rem;
   padding-left: 4rem;
   padding-right: 4rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .nav__cta {
@@ -72,6 +78,10 @@ body {
   color: white;
   border-radius: 2.8rem;
   padding: 1.4rem 3.1rem;
+}
+.nav__cta:focus,
+.nav__cta:hover {
+  background: #666ca3;
 }
 .main {
   border: 1px solid transparent;
@@ -112,17 +122,21 @@ body {
   border-radius: 3.15rem;
   padding: 1.9rem 3.1rem 1.6rem 3.2rem;
 }
+.hero__cta:hover,
+.hero__cta:focus {
+  opacity: 0.5;
+}
 .hero__imgbox {
   max-width: 99.163rem;
   height: 93.692rem;
   position: absolute;
   top: -15rem;
   right: -30rem;
+  z-index: 0;
 }
 .features {
   max-width: 110rem;
   margin: 0 auto;
-
   margin-bottom: 14rem;
 }
 .features__feature-list {
@@ -135,6 +149,12 @@ body {
   padding: 6.4rem 3.2rem 0 3.2rem;
   background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
 }
+.features__f {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: white;
+}
 .features__feature {
   padding: 6.4rem 3.2rem 4rem 3.2rem;
   border-radius: 15px;
@@ -142,12 +162,7 @@ body {
   position: relative;
   background-color: white;
 }
-.features__f {
-  font-weight: 800;
-  font-size: 3.2rem;
-  line-height: 4rem;
-  color: white;
-}
+
 .features__iconbox {
   position: absolute;
   top: -2.4rem;
@@ -174,6 +189,10 @@ body {
   font-size: 1.8rem;
   line-height: 2.8rem;
 }
+.features__cta:hover,
+.features__cta:focus {
+  color: #ffa7c3;
+}
 .footer {
   background: #13183f;
   padding: 3.2rem 4rem;
@@ -181,6 +200,7 @@ body {
 .container {
   width: 100%;
   max-width: 1110px;
+  flex-wrap: wrap;
 }
 .footer__cta {
   border-radius: 2.8rem;
@@ -190,4 +210,136 @@ body {
   font-size: 1.8rem;
   line-height: 2.8rem;
   color: white;
+}
+.footer__cta:hover,
+.footer__cta:focus {
+  opacity: 0.5;
+}
+.hero__imgbox--mobile {
+  display: none;
+}
+@media all and (max-width: 1259px) {
+  body,
+  html {
+    overflow: initial;
+  }
+  .hero__imgbox--desktop {
+    display: none;
+  }
+  .hero {
+    display: flex;
+    margin-bottom: 15rem;
+  }
+  .hero__imgbox--mobile {
+    display: flex;
+    position: relative;
+    top: initial;
+    right: initial;
+    max-width: 62.7rem;
+    height: 60.1rem;
+  }
+}
+@media all and (max-width: 1019px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media all and (max-width: 875px) {
+  .nav {
+    margin-bottom: 9.9rem;
+  }
+  .hero {
+    margin-bottom: 21rem;
+  }
+  .features {
+    max-width: 68.9rem;
+    margin-bottom: 8.6rem;
+  }
+  .features__feature-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5.6rem 1rem;
+  }
+  .features__feature-main {
+    padding: 5.6rem 2.1rem 0 3.2rem;
+  }
+  .features__f {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .features__feature {
+    padding: 5.6rem 2.2rem 3.2rem 3.2rem;
+  }
+  .features__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.6rem;
+  }
+  .features__description {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+@media all and (max-width: 768px) {
+  .hero {
+    text-align: initial;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .nav {
+    margin-bottom: 3.8rem;
+  }
+  .hero {
+    margin-bottom: 6.6rem;
+  }
+  .features {
+    max-width: 343rem;
+    margin-bottom: 8rem;
+    text-align: center;
+  }
+  .features__feature-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem 0rem;
+  }
+  .features__feature-main {
+    padding: 2.4rem 2.9rem 3.2rem 2.8rem;
+  }
+  .features__feature {
+    padding: 5.6rem 2.9rem 3.2rem 2.8rem;
+  }
+  .features__iconbox {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .features__description {
+    margin: 2.4rem auto;
+  }
+}
+@media all and (max-width: 467px) {
+  .nav,
+  .main {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  .hero__title {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 2.6rem;
+  }
+  .hero__imgbox--mobile {
+    max-width: 42.7rem;
+    height: 40.1rem;
+  }
+}
+@media all and (max-width: 375px) {
+  .features {
+    text-align: initial;
+  }
+  .features__iconbox {
+    left: 2.8rem;
+    transform: translateX(0%);
+  }
 }
