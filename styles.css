@@ -60,6 +60,8 @@ body {
   max-width: 111rem;
   margin: 0 auto;
   margin-bottom: 17.2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .nav__cta {
@@ -74,6 +76,8 @@ body {
 .main {
   border: 1px solid transparent;
   background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 .hero {
   max-width: 111rem;
@@ -172,7 +176,7 @@ body {
 }
 .footer {
   background: #13183f;
-  padding: 3.2rem 0;
+  padding: 3.2rem 4rem;
 }
 .container {
   width: 100%;
