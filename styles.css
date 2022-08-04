@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Ramaraja", serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 html {
@@ -55,22 +55,63 @@ button {
 }
 body {
   padding: 2.4rem 4rem 0 4rem;
+  overflow-x: hidden;
 }
 .nav {
-  border: 1px solid black;
   max-width: 111rem;
   margin: 0 auto;
   margin-bottom: 17.2rem;
 }
-.cta {
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
+
 .nav__cta {
-  padding: 1.4rem 3.1rem;
   background: #13183f;
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.8rem;
   color: white;
   border-radius: 2.8rem;
+  padding: 1.4rem 3.1rem;
+}
+.main {
+  border: 1px solid red;
+}
+.hero {
+  max-width: 111rem;
+  margin: 0 auto;
+  margin-bottom: 25rem;
+}
+.hero__textbox {
+  max-width: 45.7rem;
+}
+.hero__title {
+  color: #13183f;
+  font-weight: 800;
+  font-size: 5.6rem;
+  line-height: 7.1rem;
+  margin-bottom: 2.9rem;
+}
+.hero__description {
+  color: #83869a;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin-bottom: 4rem;
+  max-width: 44.5rem;
+}
+.hero__cta {
+  display: inline-block;
+  background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: white;
+  border-radius: 3.15rem;
+  padding: 1.9rem 3.1rem 1.6rem 3.2rem;
+}
+.hero__imgbox {
+  max-width: 99.163rem;
+  height: 93.692rem;
+  position: absolute;
+  top: -10rem;
+  right: -30rem;
 }
