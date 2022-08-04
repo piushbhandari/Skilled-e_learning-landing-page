@@ -54,8 +54,7 @@ button {
   object-fit: cover;
 }
 body {
-  padding: 2.4rem 4rem 0 4rem;
-  overflow-x: hidden;
+  /* padding: 2.4rem 4rem 0 4rem; */
 }
 .nav {
   max-width: 111rem;
@@ -73,7 +72,8 @@ body {
   padding: 1.4rem 3.1rem;
 }
 .main {
-  border: 1px solid red;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
 }
 .hero {
   max-width: 111rem;
@@ -112,6 +112,78 @@ body {
   max-width: 99.163rem;
   height: 93.692rem;
   position: absolute;
-  top: -10rem;
+  top: -15rem;
   right: -30rem;
+}
+.features {
+  max-width: 110rem;
+  margin: 0 auto;
+
+  margin-bottom: 14rem;
+}
+.features__feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8rem 3rem;
+}
+.features__feature-main {
+  border-radius: 1.5rem;
+  padding: 6.4rem 3.2rem 0 3.2rem;
+  background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+}
+.features__feature {
+  padding: 6.4rem 3.2rem 4rem 3.2rem;
+  border-radius: 15px;
+  box-shadow: 0 25px 50px rgba(6, 22, 141, 0.0442381);
+  position: relative;
+  background-color: white;
+}
+.features__f {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: white;
+}
+.features__iconbox {
+  position: absolute;
+  top: -2.4rem;
+  left: 3.2rem;
+}
+.features__title {
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: #13183f;
+  margin-bottom: 2.4rem;
+}
+.features__description {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: #83869a;
+  margin-bottom: 2.4rem;
+  max-width: 28.6rem;
+}
+.features__cta {
+  color: #f74780;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.footer {
+  background: #13183f;
+  padding: 3.2rem 0;
+}
+.container {
+  width: 100%;
+  max-width: 1110px;
+}
+.footer__cta {
+  border-radius: 2.8rem;
+  background: linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+  padding: 1.4rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: white;
 }
