@@ -54,7 +54,7 @@ button {
   object-fit: cover;
 }
 body {
-  /* padding: 2.4rem 4rem 0 4rem; */
+  padding-top: 2.4rem;
 }
 .nav {
   max-width: 111rem;
